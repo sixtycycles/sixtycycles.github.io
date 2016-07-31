@@ -1,0 +1,44 @@
+/* some bullshit css */
+
+
+
+
+body{
+    margin: auto;
+    padding: 10px;
+    border: 1px solid black;
+    background-color: #151515;
+}
+
+h1{
+    color: whitesmoke;
+    font-family: Andale Mono, sans-serif;
+}
+p{
+    color: #FFFFFF;
+    font-family: Andale Mono, sans-serif;
+
+}
+.nav{ display:block;
+    margin: 0px 5px;
+    padding:5px;
+
+}
+.nav li{
+    display:inline;
+    border: 2px solid #333;
+    border-radius:4px;
+    padding:2px;
+    background-color: dimgray;
+
+}
+a {
+    font-family: Andale Mono, sans-serif ;
+    text-decoration: none;
+    color: whitesmoke;
+    padding:0px 2px;
+}
+a:hover{
+    color: red;
+    background-color: white;
+}
