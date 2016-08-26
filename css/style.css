@@ -1,13 +1,11 @@
 body{
   margin: 0px 0px;
-  background-color: #333;
+  background-color: #eee;
   font-family: 'abel', sans-serif;
   font-size:12pt;
 }
 .profilePhoto{
-  border-radius:15%;
-  
-  
+  border-radius:5%;
 }
 .fa{
   margin-right:6px;
@@ -24,13 +22,6 @@ body{
   padding:5px;
 }
 .shrink{
- display:block-inline;
+ display:block;
 }
-.parralax{
-  background-image: url("http://weneedfun.com/wp-content/uploads/2016/04/Moon-Surface-20.jpg"); 
-  height: 100%; 
-  background-attachment: fixed;
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+
