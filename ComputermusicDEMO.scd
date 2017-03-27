@@ -1,6 +1,12 @@
-"Hello World!".postln;
+// Computers and music Workshop
+// Folger Library 
+// 3.27.2017 
+// by rod o'connor
+// https://github.com/sixtycycles
 
 //strings, method, semi-colon.
+
+"Hello World!".postln;
 
 //expression, variable:
 (
@@ -55,44 +61,91 @@ a.free;
 //CONTROL STRUCTURES:
 
 //logic: if, While, for,do
-for( 1 , 10 , {|i| i.postln;} )
+for( 1 , 10 , {|i| i.postln;} );
+
+//a do loop!
+(
+var out = 0;
+11.do({
+	out.postln;
+	out=out+1;
+});
+)
+
+// so a loop is a way to "iterate" over a collection or list. this means it will do some function (action) once for each element in the list.
+//in supercollider there are special classes for looping that make music composition much easier! (and less math-y)
+
+// these are called patterns.
+(
+a = Pseq([1,2,3],2);
+b = a.asStream;
+)
+
+b.next;
 
 
-/*
-In this seciton i will examine more loops and make the transition to using the patterns class. this should provide a neat transition for non programming ppl.
 
-something like, set up a basic pattern,
+// there are a few special classes that model different kinds of loops.
 
-have everyone input a 10 note phrase, and dur values, improvise together ect, ect.
+Pseq = sequentially run through a list of values some number of times.
 
-will have to briefly talk about client server structure ect.
+Prand = randomly select from a list of values some number of times.
 
-start or end with twitter instrument. may be difficult to set up in python, and will need keys.
+Pn = repeat another pattern some number of times.
 
-*/
+Pfunc = a function that will return values when asked.
+
+and a special one:
+
+Pbind = for sticking patterns together and binding to an instument.
+
+// these need to be nested to make a proper structure:
+(
+Pbind(*[
+	"instrument" : "Default",
+	"degree": Pseq([1,2,3,4,5,6,7,8],1)
+]
+).play
+)
+
+
 
 //some stuff for fun:
-
+//these are SynthDefs. technically they are functions that describe synthesis objects on the server.
+// more practically, you can think of them as instruments
 
 (
-SynthDef("vOsc",{ arg out=0, freq = 440, amp=0.1;
-	var env = EnvGen.ar(Env.sine,doneAction:2);
-	var sig =  SinOsc.ar( freq/2, 0, amp);
+SynthDef("vOsc",{ arg out=0, freq = 440, sustain = 1, amp=0.1;
+	var env = EnvGen.ar(Env.sine, timeScale:sustain, doneAction:2);
+	var sig =  SinOsc.ar( freq, 0, amp);
 	sig= sig*env;
 	sig = Pan2.ar(sig, 0,amp/4);
 	OffsetOut.ar(out,sig)
 }).store;
 
-SynthDef("vOsc2",{ arg out=0,freq = 440, amp = 0.3 ;
+SynthDef("vOsc2",{ arg out=0,freq = 440, sustain = 1,amp = 0.3 ;
 	var sig =  Saw.ar( freq, 1);
-	var env = EnvGen.ar(Env.perc,timeScale:2, doneAction:2);
-	sig = Pan2.ar(RLPF.ar(sig*env,freq*2,1.5,1)*env, 0,amp);
+	var env = EnvGen.ar(Env.perc,timeScale:sustain, doneAction:2);
+	sig = Pan2.ar(RLPF.ar(sig*env,freq*3 ,1.5,1)*env, 0,amp);
 	OffsetOut.ar(out,sig)
 }).store;
 )
 
+
+
 (
-a = Scale.aeolian;
+//here we wil set a variable called a to the Scale Object.
+//effectively this tells the environment that we're playing in this key and tuning.
+
+//if you run Scale.directory; you can see a list of the available scales.
+Scale.directory;
+
+a = Scale.neapolitanMinor;
+
+//and here are some patterns that  bind phrases to  the instruments.
+//fthe first line inside the Pbind tells us what instrument we are playing.
+//degree represents a scale degree. think of this as notes in a scale, but with numbers instead of letters.(degree 1 = c, degree 2 = c# ect....
+
 Pbind(
 	\instrument, \vOsc,
 	\degree, Prand((0,1..12), inf),
@@ -111,3 +164,37 @@ Pbind(
 )
 
 
+//here is an example of a different type of synthesis.
+//this is called granular synthesis, and uses a sound file for input data, rather than an oscilator!
+
+
+(
+SynthDef(\timeMachine, { | out=0, bufnum = 0, rate = 1, startPos = 0, amp = 0.1, sustain = 1, pan = 0, loop = 1|
+    var audio;
+    rate = rate * BufRateScale.kr(bufnum);
+    startPos = startPos * BufFrames.kr(bufnum);
+
+    audio = BufRd.ar(1, bufnum, Phasor.ar(0, rate, startPos, BufFrames.ir(bufnum)), 1, 1);
+    audio = EnvGen.ar(Env.sine, 1, timeScale: sustain, doneAction: 2) * audio;
+    audio = Pan2.ar(audio, pan, amp);
+    OffsetOut.ar(out, audio);
+}).add;
+
+a = Pproto({
+    ~newgroup = (type: \group).yield;
+    ~sf1 = (type: \allocRead, path: Platform.resourceDir +/+ "sounds/a11wlk01-44_1.aiff").yield;
+},
+    Pdef(\a,Pbind(*[
+        instrument:    \timeMachine,
+	        dur:        Pseg([0,0,0.25,0.5, 0.75, 1],10,'exp'),
+        legato:        4,
+        startPos:    Pn(Pseg([0,1], 10), inf),
+	    rate:        [1,1.333,1.567],
+        loop:        0,
+        group:        Pkey(\newgroup),
+        bufnum:        Pkey(\sf1)
+    ])
+);
+);
+a.play;
+)
