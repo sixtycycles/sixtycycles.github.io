@@ -1,172 +1,135 @@
 <!DOCTYPE html>
-<html >
-  <head>
+<html>
+<head>
 
     <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Roderic O'Connor's Portfolio</title>
-      <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-      <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Rod O'Connor</title>
 
-      <link rel="stylesheet" href="css/style.css">
-      <link rel="icon" href="images/person.png">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+</head>
 
-      <!-- get a nice font yeah, also icons for SM -->
-      <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  </head>
-
-  <body>
+<body>
 
 
+<!-- nav -->
 
-    <!-- nav -->
-
-    <nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
-
         <div class="navbar-header">
             <button type="button" class="navbar-toggle " data-toggle="collapse" data-target="#navMain">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
-
             </button>
-            <a class="navbar-brand" href="#top">Rod O'Connor</a>
+            <a class="navbar-brand" href="#top">rod o'connor</a>
         </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
+
         <div class="collapse navbar-collapse" id="navMain">
             <ul class="nav navbar-nav ">
-                <li><a href="#aboutArea"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>about</a></li>
-                <li><a href="#musicArea"><span class="glyphicon glyphicon-music" aria-hidden="true"></span>music</a></li>
-                <li><a href="#portfolioArea"><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>portfolio</a></li>
-                <li class="divider"></li>
-</ul>
-                <ul class="nav navbar-nav navbar-right">
-                <li><a href="#contactArea"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>contact</a>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">contact <span class="caret"></span></a>
+
+                    <ul class="dropdown-menu">
+
+                            <li>
+                                <a href="mailto:sixtycycles@gmail.com?Subject=portfolio contact form &body=Hi, I found your portfolio and I am contacting you! Please get back to me?"
+                                   target="_blank">
+                                    <button class="btn btn-default">email me!</button>
+                                </a>
+                            </li>
+
+                            <li><a href="https://www.linkedin.com/in/rod-o-connor-5049a56b" target="_blank">
+                                    <button class="btn btn-default">linkedIn</button>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="http://stackoverflow.com/users/6576720/roderic-oconnor" target="_blank">
+                                    <button class="btn btn-default">stack overflow</button>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="http://twitter.com/60hz" target="_blank">
+                                    <button class="btn btn-default">twitter</button>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="http://github.com/sixtycycles" target="_blank">
+                                    <button class="btn btn-default">github</button>
+                                </a>
+                            </li>
+                        </ul>
+
                 </li>
             </ul>
-
         </div>
-        <!-- /.navbar-collapse -->
-
     </div>
+</nav>
 
-    <!-- /.container-fluid -->
-    </nav>
+<!-- main stuff -->
+<div id="space">
 
-
-    <div id="space">
-        <div class="container-fluid" id="top">
+    <div class="container fix" id="top">
+        <!-- -->
+        <div class="col-lg-3">
             <div class="panel panel-default" id="aboutArea">
-                <div class="panel-heading">
-                    <h1 class="panel-title">about</h1>
-                </div>
+
                 <div class="panel-body">
-                    <div class="col-md-3"><img
+                    <img
                             src="https://pbs.twimg.com/profile_images/757628447451734016/tPpqeK34_400x400.jpg"
-                            class="img-responsive profilePhoto "></div>
-                    <div class="col-md-9">
-    <p> Hi, im rod, i am learning lots of ways to write code.
-        Previously i have worked on a farm, and i also have a degree in experimental music.
-        I live in maine with my wife who is a librarian (librarians are awesome!)
-        I also attend the <a href="http://maine.edu">University of Maine</a> where i'm pursuing a <a href="https://umaine.edu/msis/">Masters in Information Systems</a>.
-        </br>
-        I hope to one day get a job as a developer, because writing code is cool.
-        </br >
-        For now i'm still learning!
-        </br></br>
-        I also like tiny cups of coffee. </p>
+                            class="img-responsive center-block">
+                    <h4>hi!</h4>
+                    <p class=""> this is my portfolio! i am currently a student at the university of
+                        maine, where im
+                        obtaining my masters in information systems. previously, i studied experimental music at
+                        wesleyan university.</p>
+                    <p>
+                        i also work part time as a database admin/sys admin for a local nonprofit organization. i live
+                        in maine with my wife who is a librarian. i would like to work for libraries and archives as a
+                        developer one day. I also like tiny cups of coffee. </p>
+
                 </div>
+
             </div>
         </div>
 
 
-    <!-- close bar -->
-
-    <div class="panel panel-default" id="musicArea">
-                    <div class="panel-heading">
-                        <h1 class="panel-title">Music</h1>
-                    </div>
-                    <div class="panel-body">
-                        <p>i have studied music at <a href="http://wesleyan.edu">Wesleyan University</a>, where i first learned to program in
-                            the language/ environment <a href="http://supercollider.github.io/">Supercollider</a>. </p>
-                <div class="col-md-4">
-                        <div class="embed-responsive embed-responsive-4by3 ">
-                            <iframe scrolling="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/56939336&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe></div>
-
-                      </div>
-                    </div>
-                </div>
-
-                <div class="panel panel-default" id="portfolioArea">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Projects</h3>
-                    </div>
-                    <div class="panel-body">
-
-                        <div id="project1" class="well col-md-3">
-                            <h5>Supercollider intstruments! </h5>
-                            <a href="https://github.com/sixtycycles/Supercollider_grainmill"><img class="img-responsive img-rounded small-image" src="images/sc.png" alt="supercollider Logo"></a>
-                            <p>these are some instruments i made in college, that ive re written for the latest version of SC. </p>
-                        </div>
-
-                        <div id="project2" class="well col-md-3">
-                            <h5>python for work</h5>
-                            <a href="https://github.com/sixtycycles/csvscripts"><img class="img-responsive img-rounded small-image" src="images/py.png" alt="python logo"></a>
-                            <p>some little python scripts for fixing csv's at work. </p>
-                        </div>
-
-                        <div id="project3" class="well col-md-3">
-                            <h5>Community solar database and frontend</h5>
-                            <a href="https://github.com/sixtycycles/CommunitySolar"><img class="img-responsive img-rounded small-image" src="images/sql.png" alt="mySQL logo"></a>
-                            <p>MySql database and php frontend for a school project!</p>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="panel panel-default" id="contactArea">
-                    <div class="panel-heading">
-                        <h1 class="panel-title">contact</h1>
-                    </div>
-                    <div class="panel-body">
-
-                        <div class="col-md-3">Hi! please feel free to contact me about anything you see here! you can send
-                            me an email, and i'll get back to you as soon as i can! </div>
-                        <a href="mailto:sixtycycles@gmail.com?Subject=portfolio contact form &body=Hi, I found your portfolio and I am contacting you! Please get back to me?"
-                           target="_blank">
-                            <button class="btn btn-primary">email me!</button>
-                      </a>
-
-                          <a href="https://www.linkedin.com/in/rod-o-connor-5049a56b" target="_blank">
-                            <button class="btn btn-primary"><i class="fa fa-linkedin"></i>linkedIn</button>
-                        </a>
-                          <a href="http://stackoverflow.com/users/6576720/roderic-oconnor" target="_blank">
-                            <button class="btn btn-primary"><i class="fa fa-stack-overflow"></i>stack overflow</button>
-                        </a>
-                          <a href="http://twitter.com/60hz" target="_blank">
-                            <button class="btn btn-primary"><i class="fa fa-twitter"></i>twitter</button>
-                        </a>
-                          <a href="http://github.com/sixtycycles" target="_blank">
-                            <button class="btn btn-primary"><i class="fa fa-github"></i>github</button>
-                        </a>
-                        </div>
-                    </div>
-                </div>
-
+        <!-- main area nav-->
+        <div class="col-lg-8">
+            <ul class="nav nav-tabs">
+                <li><a href="#">about me</a></li>
+                <li><a href="#">projects</a></li>
+                <li><a href="#">fun things</a></li>
+            </ul>
+            <!--main area body -->
+            <div class="area" id="mainArea">
+                <h3>AREA</h3>
+                <p>some paragraph text or images and shit.</p>
+            </div>
         </div>
+
+
     </div>
+
+</div>
+<!-- space-->
 </div>
 
 
-    
-    
-    
-    
-  </body>
+</body>
 </html>
