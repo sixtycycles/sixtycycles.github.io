@@ -6,25 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Rod O'Connor</title>
 
-    <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
-          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
             crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
 </head>
 
 <body>
 
-
 <!-- nav -->
-
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
+
         <div class="navbar-header">
             <button type="button" class="navbar-toggle " data-toggle="collapse" data-target="#navMain">
                 <span class="sr-only">Toggle navigation</span>
@@ -35,66 +34,68 @@
             <a class="navbar-brand" href="#top">rod o'connor</a>
         </div>
 
-
         <div class="collapse navbar-collapse" id="navMain">
-            <ul class="nav navbar-nav ">
-                
+            <ul class="nav navbar-nav navbar-right">
+
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">contact <span class="caret"></span></a>
-
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">contact<span class="caret"></span></a>
                     <ul class="dropdown-menu">
+                        <li>
+                            <a href="mailto:sixtycycles@gmail.com?Subject=portfolio contact form &body=Hi, I found your portfolio and I am contacting you! Please get back to me?"
+                               target="_blank">
+                                email
+                            </a>
+                        </li>
 
-                            <li>
-                                <a href="mailto:sixtycycles@gmail.com?Subject=portfolio contact form &body=Hi, I found your portfolio and I am contacting you! Please get back to me?"
-                                   target="_blank">
-                                    <button class="btn btn-default">email me!</button>
-                                </a>
-                            </li>
+                        <li><a href="https://www.linkedin.com/in/rod-o-connor-5049a56b" target="_blank">
+                            linkedIn
+                        </a>
+                        </li>
 
-                            <li><a href="https://www.linkedin.com/in/rod-o-connor-5049a56b" target="_blank">
-                                    <button class="btn btn-default">linkedIn</button>
-                                </a>
-                            </li>
+                        <li>
+                            <a href="http://stackoverflow.com/users/6576720/roderic-oconnor" target="_blank">
+                                stack overflow
+                            </a>
+                        </li>
 
-                            <li>
-                                <a href="http://stackoverflow.com/users/6576720/roderic-oconnor" target="_blank">
-                                    <button class="btn btn-default">stack overflow</button>
-                                </a>
-                            </li>
+                        <li>
+                            <a href="http://twitter.com/60hz" target="_blank">
+                                twitter
+                            </a>
+                        </li>
 
-                            <li>
-                                <a href="http://twitter.com/60hz" target="_blank">
-                                    <button class="btn btn-default">twitter</button>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="http://github.com/sixtycycles" target="_blank">
-                                    <button class="btn btn-default">github</button>
-                                </a>
-                            </li>
-                        </ul>
-
+                        <li>
+                            <a href="http://github.com/sixtycycles" target="_blank">
+                                github
+                            </a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
-        </div>
-    </div>
+
+
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+
 </nav>
+
 
 <!-- main stuff -->
 <div id="space">
 
     <div class="container fix" id="top">
         <!-- -->
-        <div class="col-lg-3">
+
+        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-3">
             <div class="panel panel-default" id="aboutArea">
 
                 <div class="panel-body">
-                    <img
-                            src="https://pbs.twimg.com/profile_images/847921204639834112/QlJV5kL8.jpg"
-                            class="img-responsive center-block">
+                    <img src="https://pbs.twimg.com/profile_images/847921204639834112/QlJV5kL8.jpg"
+                         class="img-responsive center-block">
+
                     <h4>hi!</h4>
-                    <p class=""> i am currently a student at the university of
+                    <p> i am currently a student at the university of
                         maine, where i'm
                         obtaining my masters in information systems (MSIS). previously, i studied experimental music at
                         wesleyan university.</p>
@@ -107,29 +108,45 @@
 
             </div>
         </div>
-
-
         <!-- main area nav-->
-        <div class="col-lg-8">
+        <div class="col-xs-8 col-sm-8 col-md-8 lg-8">
             <ul class="nav nav-tabs">
-                <li><a href="#">about me</a></li>
-                <li><a href="#">projects</a></li>
-                <li><a href="#">fun things</a></li>
+                <li class="active"><a href="#" onclick="about()">about me</a></li>
+                <li><a href="#" onclick="projects()">projects</a></li>
+                <li><a href="#" onclick="fun()">fun things</a></li>
             </ul>
             <!--main area body -->
-            <div class="area" id="mainArea">
-                <h3>AREA</h3>
-                <p>some paragraph text or images and shit.</p>
+            <div id="about">
+                <h3>About</h3>
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            </div>
+
+            <div id="projects">
+                <h3>Projects</h3>
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            </div>
+                <h3>Fun!</h3>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            <div id="fun">
+
+
             </div>
         </div>
 
 
     </div>
+</div>
 
-</div>
+
 <!-- space-->
-</div>
+
+
 
 
 </body>
 </html>
+
+
+<!--
+
+ -->
