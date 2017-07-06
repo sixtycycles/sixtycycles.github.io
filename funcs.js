@@ -3,12 +3,13 @@
  */
 
 function setup(){
-document.getElementById('about').style.visibility="hidden"
-    document.getElementById('projects').style.visibility="hidden"
-    document.getElementById('fun').style.visibility="hidden"
+document.getElementById('about').style.visibility="hidden";
+    document.getElementById('projects').style.visibility="hidden";
+    document.getElementById('fun').style.visibility="hidden";
 }
 
 function about(){
+
     document.getElementById('about').style.visibility = "visible";
     document.getElementById('projects').style.visibility = "hidden";
     document.getElementById('fun').style.visibility = "hidden";
