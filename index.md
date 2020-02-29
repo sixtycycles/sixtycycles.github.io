@@ -1,4 +1,4 @@
-## Rod O'Connor 
+## Rod O'Connor
 
 
 I'm curious about how things work and why they break or don't work.
@@ -28,3 +28,6 @@ Some of the fun things I have learned recently are:
   * Painting
   * Dishwasher
   * House Renovation
+
+
+I work for the Department of Earth, Planetary, and Space Sciences at UCLA, Where my title is IT Director.
