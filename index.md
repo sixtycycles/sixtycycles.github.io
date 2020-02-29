@@ -1,4 +1,4 @@
-## Rod O'Connor ##
+## Rod O'Connor 
 
 
 I'm curious about how things work and why they break or don't work.
