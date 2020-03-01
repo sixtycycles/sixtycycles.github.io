@@ -1,9 +1,10 @@
 ## Rod O'Connor
 
-I work for UCLA, where I'm the IT Director for the Department of Earth, Planetary, and Space Sciences. We do everything from building satellites to detecting earthquakes.
-I'm curious about how things work and why they break or stop working. Problem solving is fun!
-
 ![Image of Rod ](images/rod.JPG)
+
+I work for UCLA, where I'm the IT Director for the Department of Earth, Planetary, and Space Sciences. I'm working to modernize the workflows and stack in use, while supporting lots of one off scientific labs. 
+Generally, I'm curious about how things work and why they break or stop working.
+
 
 I like learning new things!
 Some of the fun things I have learned recently are:
@@ -16,7 +17,7 @@ Some of the fun things I have learned recently are:
 
   * IT Director
   * Web Developer
-  * Database administrator/Sysadmin
+  * Dba/Sysadmin
   * Cooked Food
   * Farm Mechanic
   * Draft Line Cleaner (beer taps)
@@ -28,3 +29,4 @@ Some of the fun things I have learned recently are:
   * Painting
   * Dishwasher
   * House Renovation
+
