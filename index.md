@@ -2,7 +2,7 @@
 
 ![Image of Rod ](images/rod.JPG)
 
-I work for UCLA, where I'm the IT Director for the Department of Earth, Planetary, and Space Sciences. I'm working to modernize the workflows and stack in use, while supporting lots of one off scientific labs. 
+I work for UCLA, where I'm the IT Director for the Department of Earth, Planetary, and Space Sciences. I'm working to modernize the department's workflows and tech stack, while supporting lots of specialized scientific labs and research groups. 
 Generally, I'm curious about how things work and why they break or stop working.
 
 
