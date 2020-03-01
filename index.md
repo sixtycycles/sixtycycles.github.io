@@ -1,13 +1,15 @@
 ## Rod O'Connor
+
 I work for UCLA, where I'm the IT Director for the Department of Earth, Planetary, and Space Sciences. We do everything from building satellites to detecting earthquakes.
 I'm curious about how things work and why they break or stop working. Problem solving is fun!
 
+![Image of Rod ](images/rod.JPG)
 
-
+I like learning new things!
 Some of the fun things I have learned recently are:
 
   * More than I ever wanted to know about remodeling an entire house
-  * Some things about how computers actually work
+  * Networking
   * Many things can be waffles if you try hard enough
 
 ### Some of the things I've done for money, in no particular order: ###
